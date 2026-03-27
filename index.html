@@ -310,6 +310,15 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
 
+    /* Style for single composite comic strips */
+    .composite-picture {
+      grid-column: 1 / -1; /* Spans all columns */
+      height: auto;
+      max-height: 400px;
+      object-fit: contain;
+      background: #000;
+    }
+
     /* Shared Answer Box Styles */
     .answer-btn {
       font-size: 1.5rem;
@@ -380,6 +389,7 @@
       .roulette-box { padding: 40px 15px; }
       .result-area { padding: 30px 20px; }
       .pic-placeholder, .real-picture { height: 120px; font-size: 1rem; }
+      .composite-picture { height: auto; max-height: 300px; }
       .level-tab { font-size: 1rem; padding: 10px 15px;}
     }
 
@@ -393,6 +403,7 @@
       .guidelines li::before { font-size: 1.4rem; }
       .answer-btn { font-size: 1.2rem; }
       .level-controls { flex-direction: column; gap: 10px; }
+      .composite-picture { max-height: 200px; }
     }
   </style>
 </head>
@@ -577,7 +588,8 @@
             { situation: "What do you think about the popularity of K-pop in Taiwan?", guidelines: ["State your opinion on K-pop.", "Mention a reason related to music or culture.", "Acknowledge that not everyone may feel the same."], answer: "I think K-pop is very popular in Taiwan because the music is catchy and the idols are very talented. It has also helped promote Korean culture here. However, I understand that not everyone is a fan of K-pop, and that's okay too!" },
             { situation: "Do you think it's better to live in a big city or a small town? Why?", guidelines: ["State your preference clearly.", "Give a reason related to lifestyle or opportunities.", "Mention a downside of the other option."], answer: "I prefer living in a big city because there are more job opportunities and entertainment options. However, I know that small towns can be quieter and more peaceful, which some people might prefer." },
             { situation: "What is your opinion on the use of technology in education?", guidelines: ["State your opinion (positive, negative, or mixed).", "Explain a benefit of using technology.", "Mention a potential drawback."], answer: "I think technology in education is very beneficial because it allows for interactive learning and access to a vast amount of information. However, it can also be distracting for some students if not used properly." },
-            { situation: "What do you think about the importance of learning English in Taiwan?", guidelines: ["State your opinion on learning English.", "Give a reason related to global communication or career opportunities.", "Acknowledge that it can be challenging for some students."], answer: "I think learning English is very important in Taiwan because it opens up opportunities for global communication and can enhance career prospects. However, I understand that it can be challenging for some students, especially if they don't have access to good resources or teachers." }
+            { situation: "What do you think about the importance of learning English in Taiwan?", guidelines: ["State your opinion on learning English.", "Give a reason related to global communication or career opportunities.", "Acknowledge that it can be challenging for some students."], answer: "I think learning English is very important in Taiwan because it opens up opportunities for global communication and can enhance career prospects. However, I understand that it can be challenging for some students, especially if they don't have access to good resources or teachers." },
+            { situation: "Do you think Kobe Bryant was better than Lebron James? Why?", guidelines: ["State your opinion on who is better.", "Give a reason related to their skills or achievements.", "Acknowledge that both players are great."], answer: "I think Kobe Bryant was better than LeBron James because of his incredible scoring ability and his five NBA championships. However, I also acknowledge that LeBron is an amazing player with his versatility and has won four championships. Both of them are legends in basketball!" }
           ] 
         },
         { 
@@ -605,9 +617,6 @@
             { situation: "Explain how to buy a single-journey token at an MRT ticket machine.", guidelines: ["Start with selecting the language or destination.", "Mention inserting money or coins.", "Explain what the machine will dispense."], answer: "First, look at the screen on the ticket machine and select your destination station or the ticket price. Next, insert your coins or a banknote into the correct slot. Then, wait a moment for the machine to process. Finally, take your blue plastic token and any change from the tray at the bottom." },
             { situation: "Explain how to rent and return a YouBike using an EasyCard.", guidelines: ["Explain how to unlock the bike.", "Mention adjusting the seat before riding.", "Explain the return process."], answer: "First, place your registered EasyCard on the sensor panel of the YouBike dock to unlock it. Next, pull the bike out and adjust the seat to your height. After you finish riding, push the bike firmly back into an empty dock and tap your card again to pay." }, 
             { situation: "Explain the basic steps to make bubble tea at home.", guidelines: ["Mention boiling the tapioca pearls.", "Explain how to prepare the tea.", "Describe the final assembly."], answer: "First, boil the tapioca pearls in hot water until they are soft and chewy, then mix them with some brown sugar. Next, brew a strong cup of black tea and let it cool down. Finally, put the pearls in a glass, add the tea, pour in some milk, and add ice cubes." },
-            { situation: "Explain how to use a public restroom in Taiwan.", guidelines: ["Mention looking for the signs.", "Explain the difference between squat and sitting toilets.", "Mention any cultural etiquette."], answer: "First, look for the blue and white signs that indicate a public restroom. Next, you may find both squat toilets and sitting toilets; choose the one you are comfortable with. Finally, remember to bring your own toilet paper, as many public restrooms do not provide it, and always throw used toilet paper in the trash bin instead of the toilet." },
-            { situation: "Explain how to use a vending machine to buy a drink.", guidelines: ["Mention selecting the drink you want.", "Explain how to insert money or use a card.", "Describe how to collect the drink."], answer: "First, look at the vending machine and press the button for the drink you want. Next, insert the required amount of money into the coin slot or use a contactless card if the machine accepts it. Finally, wait for the machine to dispense your drink into the collection area, and then take it out." },
-            { situation: "Explain how to check the weather forecast on a smartphone.", guidelines: ["Mention unlocking the phone and finding the weather app.", "Explain how to enter your location.", "Describe how to read the forecast."], answer: "First, unlock your smartphone and look for the weather app, which usually has an icon of a sun or cloud. Next, open the app and allow it to access your location or manually enter your city. Finally, read the forecast for today and the upcoming days, which will show you the expected temperature, chance of rain, and other weather conditions." }
           ] 
         },
         { 
@@ -618,7 +627,7 @@
               guidelines: ["Describe Picture 1: Dark clouds overhead.", "Describe Picture 2: Starting to rain.", "Describe Picture 3: Opening an umbrella.", "Describe Picture 4: Jumping in puddles."], 
               answer: "First, the sky is full of dark clouds. Then, it suddenly starts to rain very heavily. In the third picture, a young girl is quickly opening a red umbrella to stay dry. Finally, she is wearing yellow rain boots and happily jumping in the water puddles.", 
               requiresPictures: true,
-              imageFiles: ["/images/rain.jpg"]
+              imageFiles: ["images/Rain.jpg"]
             }, // Missing 4th image: will render a placeholder for Pic 4 automatically
             { 
               situation: "Describe this sequence of events: A summer beach trip.", 
@@ -626,7 +635,7 @@
               answer: "In the first picture, a family is packing their swimsuits and towels into a large beach bag. Next, they are driving a blue car along the coast on a sunny day. In the third picture, the children are building a large sandcastle near the water. Finally, they are sitting on a blanket together, watching the sun set over the ocean.", 
               requiresPictures: true,
               imageFiles: [
-                "/images/Beach.jpg"
+                "images/Beach.jpg"
               ] 
             }, 
             { 
@@ -635,8 +644,12 @@
               answer: "First, a small brown dog is wandering alone on a city street, looking lost and sad. Then, a kind police officer finds the dog and is looking closely at the name tag on its collar. Next, the officer is using his smartphone to call the owner's phone number. Finally, a young boy is running up and happily hugging his dog.", 
               requiresPictures: true,
               imageFiles: [
-                "/images/Dogg.jpg"]
-            }
+                "images/Dog.jpg"]
+            },
+            { situation: "Describe this sequence of events: A typical morning routine.", guidelines: ["Describe Picture 1: Waking up.", "Describe Picture 2: Brushing teeth.", "Describe Picture 3: Eating breakfast.", "Describe Picture 4: Leaving for school."], answer: "In the first picture, a boy is waking up from his bed at 7 AM. Next, he is brushing his teeth in the bathroom. After that, he is eating toast and drinking a glass of milk for breakfast. Finally, he is putting on his backpack and waving goodbye to his parents as he leaves for school.", requiresPictures: true }, 
+            { situation: "Describe this sequence of events: Cooking a fried egg.", guidelines: ["Describe Picture 1: Getting an egg from the fridge.", "Describe Picture 2: Turning on the stove.", "Describe Picture 3: Cracking the egg into a frying pan.", "Describe Picture 4: Eating the fried egg."], answer: "First, a man gets a fresh egg out of his refrigerator. Next, he turns on the kitchen stove and puts a little oil in the frying pan. Then, he carefully cracks the egg into the hot pan. Finally, he is sitting down at the dining table, happily eating his fried egg.", requiresPictures: true }, 
+            { situation: "Describe this sequence of events: Catching a cold and going to the clinic.", guidelines: ["Describe Picture 1: Sneezing and looking sick.", "Describe Picture 2: Waiting at the clinic.", "Describe Picture 3: The doctor examining the patient.", "Describe Picture 4: Taking medicine at home."], answer: "First, a boy is at school, sneezing into a tissue and looking very tired. Next, he is sitting in a waiting room at a local clinic wearing a mask. Then, a friendly doctor is using a stethoscope to listen to his chest. Finally, the boy is back home in bed, drinking water and taking his medicine.", requiresPictures: true }, 
+            { situation: "Describe this sequence of events: Shopping at a traditional market.", guidelines: ["Describe Picture 1: Writing a shopping list.", "Describe Picture 2: Walking through a busy market.", "Describe Picture 3: Buying fruit from a vendor.", "Describe Picture 4: Walking home with bags."], answer: "In the first picture, a woman is sitting at her kitchen table writing a shopping list. Next, she is walking through a crowded, traditional Taiwanese morning market. In the third picture, she is smiling and handing money to a vendor to buy some fresh apples. Finally, she is walking home carrying two bags full of groceries.", requiresPictures: true }
           ] 
         }
       ]
@@ -773,6 +786,12 @@
                 const img = document.createElement('img');
                 img.src = imgSrc;
                 img.className = 'real-picture';
+                
+                // Add the composite class if it's a single 4-panel image
+                if(scenario.imageFiles.length === 1) {
+                  img.classList.add('composite-picture');
+                }
+                
                 img.alt = `Sequence step ${index + 1}`;
                 pictureGrid.appendChild(img);
               } else {
