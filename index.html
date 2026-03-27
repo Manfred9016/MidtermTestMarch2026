@@ -612,38 +612,21 @@
         },
         { 
           name: "Describe Pics", 
-          scenarios: [ 
-            { 
-              situation: "Describe this sequence of events: A typical morning routine.", 
-              guidelines: ["Describe Picture 1: Waking up.", "Describe Picture 2: Brushing teeth.", "Describe Picture 3: Eating breakfast.", "Describe Picture 4: Leaving for school."], 
-              answer: "In the first picture, a boy is waking up from his bed at 7 AM. Next, he is brushing his teeth in the bathroom. After that, he is eating toast and drinking a glass of milk for breakfast. Finally, he is putting on his backpack and waving goodbye to his parents as he leaves for school.", 
-              requiresPictures: true,
-              imageFiles: ["images/Waking up.jpg", "images/Brushing teeth.jpg", "images/Eating breakfast.jpg", "images/Leaving for school.jpg"] // Missing images: will use text placeholders automatically
-            }, 
+          scenarios: [  
             { 
               situation: "Describe this sequence of events: Getting caught in the rain.", 
               guidelines: ["Describe Picture 1: Dark clouds overhead.", "Describe Picture 2: Starting to rain.", "Describe Picture 3: Opening an umbrella.", "Describe Picture 4: Jumping in puddles."], 
               answer: "First, the sky is full of dark clouds. Then, it suddenly starts to rain very heavily. In the third picture, a young girl is quickly opening a red umbrella to stay dry. Finally, she is wearing yellow rain boots and happily jumping in the water puddles.", 
               requiresPictures: true,
-              imageFiles: ["images/Dark Clouds overhead.jpg", "images/Starting to rain.jpg", "images/Opening an umbrella.jpg", "images/Jumping in puddles.jpg"] // Missing images: will use text placeholders automatically
-            }, 
-            { 
-              situation: "Describe this sequence of events: Cooking a fried egg.", 
-              guidelines: ["Describe Picture 1: Getting an egg from the fridge.", "Describe Picture 2: Turning on the stove.", "Describe Picture 3: Cracking the egg into a frying pan.", "Describe Picture 4: Eating the fried egg."], 
-              answer: "First, a man gets a fresh egg out of his refrigerator. Next, he turns on the kitchen stove and puts a little oil in the frying pan. Then, he carefully cracks the egg into the hot pan. Finally, he is sitting down at the dining table, happily eating his fried egg.", 
-              requiresPictures: true,
-              imageFiles: ["images/Getting an egg from the fridge.jpg", "images/Turning on the stove.jpg", "images/Cracking the egg into a frying pan.jpg", "images/Eating the fried egg.jpg  "] // Missing images: will use text placeholders automatically
-            }, 
+              imageFiles: ["/images/rain.jpg"]
+            }, // Missing 4th image: will render a placeholder for Pic 4 automatically
             { 
               situation: "Describe this sequence of events: A summer beach trip.", 
               guidelines: ["Describe Picture 1: Packing a bag.", "Describe Picture 2: Driving to the beach.", "Describe Picture 3: Building a sandcastle.", "Describe Picture 4: Watching the sunset."], 
               answer: "In the first picture, a family is packing their swimsuits and towels into a large beach bag. Next, they are driving a blue car along the coast on a sunny day. In the third picture, the children are building a large sandcastle near the water. Finally, they are sitting on a blanket together, watching the sun set over the ocean.", 
               requiresPictures: true,
               imageFiles: [
-                "images/A summer beach trip.jpg", 
-                "images/Driving to the beach.jpg", 
-                "images/Building a sandcastle.jpg", 
-                "images/Watching the sunset.jpg"
+                "/images/Beach.jpg"
               ] 
             }, 
             { 
@@ -652,25 +635,7 @@
               answer: "First, a small brown dog is wandering alone on a city street, looking lost and sad. Then, a kind police officer finds the dog and is looking closely at the name tag on its collar. Next, the officer is using his smartphone to call the owner's phone number. Finally, a young boy is running up and happily hugging his dog.", 
               requiresPictures: true,
               imageFiles: [
-                "images/A dog looking lost on the street.jpg", 
-                "images/A police officer reading the dog's collar.jpg", 
-                "images/Making a phone call.jpg", 
-                "images/The owner hugging the dog.jpg" // Missing 4th image: will render a placeholder for Pic 4 automatically
-              ]
-            },
-            { 
-              situation: "Describe this sequence of events: Catching a cold and going to the clinic.", 
-              guidelines: ["Describe Picture 1: Sneezing and looking sick.", "Describe Picture 2: Waiting at the clinic.", "Describe Picture 3: The doctor examining the patient.", "Describe Picture 4: Taking medicine at home."], 
-              answer: "First, a boy is at school, sneezing into a tissue and looking very tired. Next, he is sitting in a waiting room at a local clinic wearing a mask. Then, a friendly doctor is using a stethoscope to listen to his chest. Finally, the boy is back home in bed, drinking water and taking his medicine.", 
-              requiresPictures: true,
-              imageFiles: ["", "", "", ""] // Missing images: will use text placeholders automatically
-            }, 
-            { 
-              situation: "Describe this sequence of events: Shopping at a traditional market.", 
-              guidelines: ["Describe Picture 1: Writing a shopping list.", "Describe Picture 2: Walking through a busy market.", "Describe Picture 3: Buying fruit from a vendor.", "Describe Picture 4: Walking home with bags."], 
-              answer: "In the first picture, a woman is sitting at her kitchen table writing a shopping list. Next, she is walking through a crowded, traditional Taiwanese morning market. In the third picture, she is smiling and handing money to a vendor to buy some fresh apples. Finally, she is walking home carrying two bags full of groceries.", 
-              requiresPictures: true,
-              imageFiles: ["", "", "", ""] // Missing images: will use text placeholders automatically
+                "/images/Dogg.jpg"]
             }
           ] 
         }
